@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>We need to make sure it's you</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="login_quick.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Confirm Identity component -->
+    <div id="confirm-identity" class="well auth-form-container">
+      <form class="auth-form">
+        <img class="pull-right" src="https://secure.gravatar.com/avatar/54b53868cb4d555b804125f1a3969e87.jpg?s=50&d=identicon&r=pg"/>
+        <h2 class="auth-form-heading">Is it you?</h2>
+        <p>
+          <small>You are logged in as anonymouse</small>
+        </p>
+        <label for="inputQuickConfirmPassword" class="sr-only">Password</label>
+        <input type="password" id="inputQuickConfirmPassword" class="form-control" placeholder="Password" required="">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">It's me</button>
+      </form>
+    </div>
+
+  </div> <!-- /container -->
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="login_quick.js"></script>
+</body>
+</html>

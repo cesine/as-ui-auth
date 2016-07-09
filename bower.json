@@ -1,0 +1,27 @@
+{
+  "name": "as-ui-auth",
+  "version": "0.0.1",
+  "authors": [
+    "cesine <cesine@yahoo.com>"
+  ],
+  "description": "Example client side ui components for authenticated systems workshop",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "authentication",
+    "oauth2",
+    "jwt"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "devDependencies": {
+    "jasmine-core": "jasmine#^2.4.1"
+  },
+  "dependencies": {}
+}
