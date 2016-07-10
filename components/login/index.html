@@ -15,12 +15,18 @@
       <form class="auth-form">
         <img class="pull-right" src="https://secure.gravatar.com/avatar/54b53868cb4d555b804125f1a3969e87.jpg?s=50&d=identicon&r=pg"/>
         <h2 class="auth-form-heading">Login</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-        <label for="inputServer" class="sr-only">Server</label>
-        <input type="text" id="inputServer" class="form-control" placeholder="Server" required="" value="http://localhost:3000">
+        <label for="username" class="sr-only">Email address or Username</label>
+        <input type="text" id="username" class="form-control" placeholder="Email address or Username" required="" autofocus="">
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Password" required="">
+        <label hidden for="client_id" class="sr-only">Client Id</label>
+        <input hidden type="password" id="client_id" class="form-control" placeholder="Client Id" required="">
+        <label hidden for="redirect" class="sr-only">Redirect</label>
+        <input hidden type="text" id="redirect" class="form-control" placeholder="Redirect" required="">
+        <label hidden for="redirect_uri" class="sr-only">Redirect Uri</label>
+        <input hidden type="text" id="redirect_uri" class="form-control" placeholder="Redirect Uri" required="">
+        <label hidden for="server" class="sr-only">Server</label>
+        <input hidden type="text" id="server" class="form-control" placeholder="Server" required="" value="http://localhost:3000">
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
