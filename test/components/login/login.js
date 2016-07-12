@@ -25,12 +25,12 @@ describe('Login', function() {
     it('should support json', function() {
       var login = new Login({
         server: {
-          url: 'http://localhost:3000'
+          url: 'http://localhost:8010'
         }
       });
 
       expect(login).toBeDefined();
-      expect(Login.server.url).toEqual('http://localhost:3000');
+      expect(Login.server.url).toEqual('http://localhost:8010');
     });
   });
 
@@ -70,7 +70,7 @@ describe('Login', function() {
     it('should login', function(done) {
       var login = new Login({
         server: {
-          url: 'http://localhost:3000'
+          url: 'http://localhost:8010'
         }
       });
 
@@ -135,7 +135,7 @@ describe('Login', function() {
     it('should handle 403', function(done) {
       var login = new Login({
         server: {
-          url: 'http://localhost:3000'
+          url: 'http://localhost:8010'
         }
       });
 
@@ -165,7 +165,7 @@ describe('Login', function() {
           expect(err.status).toEqual(403);
           expect(err.statusText).toEqual('Forbidden');
           expect(err.message).toEqual('Invalid username or password, please try again.');
-          // expect(err.url).toEqual('http://localhost:3000/v1/login/login');
+          // expect(err.url).toEqual('http://localhost:8010/v1/login/login');
 
           expect(fetchMockLocal.called('invalid_login')).toBeTruthy();
           done();

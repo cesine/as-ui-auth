@@ -25,12 +25,12 @@ describe('Signup', function() {
     it('should support json', function() {
       var signup = new Signup({
         server: {
-          url: 'http://localhost:3000'
+          url: 'http://localhost:8010'
         }
       });
 
       expect(signup).toBeDefined();
-      expect(Signup.server.url).toEqual('http://localhost:3000');
+      expect(Signup.server.url).toEqual('http://localhost:8010');
     });
   });
 
@@ -82,7 +82,7 @@ describe('Signup', function() {
     it('should signup', function(done) {
       var signup = new Signup({
         server: {
-          url: 'http://localhost:3000'
+          url: 'http://localhost:8010'
         }
       });
 
@@ -149,7 +149,7 @@ describe('Signup', function() {
     it('should handle 403', function(done) {
       var signup = new Signup({
         server: {
-          url: 'http://localhost:3000'
+          url: 'http://localhost:8010'
         }
       });
 
@@ -180,7 +180,7 @@ describe('Signup', function() {
           expect(err.status).toEqual(403);
           expect(err.statusText).toEqual('Forbidden');
           expect(err.message).toEqual('Username already exists, please try again.');
-          // expect(err.url).toEqual('http://localhost:3000/v1/signup/signup');
+          // expect(err.url).toEqual('http://localhost:8010/v1/signup/signup');
 
           expect(fetchMockLocal.called('invalid_signup')).toBeTruthy();
           done();
