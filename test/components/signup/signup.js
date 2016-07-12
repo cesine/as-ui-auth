@@ -88,7 +88,7 @@ describe('Signup', function() {
 
       fetchMockLocal.mock({
         name: 'valid_signup',
-        matcher: /\/v1\/signup\/register/,
+        matcher: /authentication\/signup/,
         method: 'POST',
         response: {
           id: 1,
@@ -130,7 +130,7 @@ describe('Signup', function() {
 
       fetchMockLocal.mock({
         name: 'another_server',
-        matcher: /\/v1\/signup\/register/,
+        matcher: /authentication\/signup/,
         method: 'POST',
         response: {}
       });
@@ -155,7 +155,7 @@ describe('Signup', function() {
 
       fetchMockLocal.mock({
         name: 'invalid_signup',
-        matcher: /\/v1\/signup\/register/,
+        matcher: /authentication\/signup/,
         method: 'POST',
         response: {
           status: 403,
