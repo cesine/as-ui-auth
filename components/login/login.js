@@ -49,7 +49,7 @@
         };
       }
 
-      return global.fetch(Login.server.url + '/v1/authentication/login', opts).then(function(response) {
+      return global.fetch(Login.server.url + '/authentication/login', opts).then(function(response) {
         xhr = response;
         return response.json();
       }).then(function(data) {

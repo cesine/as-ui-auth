@@ -88,7 +88,7 @@ describe('Signup', function() {
 
       fetchMockLocal.mock({
         name: 'valid_signup',
-        matcher: /authentication\/signup/,
+        matcher: /authentication\/register/,
         method: 'POST',
         response: {
           id: 1,
@@ -116,7 +116,7 @@ describe('Signup', function() {
         })
         .catch(function(err) {
           expect(err).toBeNull();
-          exect(false).toBeTruthy();
+          expect(false).toBeTruthy();
 
           expect(fetchMockLocal.called('valid_signup')).toBeTruthy();
           done();
@@ -130,7 +130,7 @@ describe('Signup', function() {
 
       fetchMockLocal.mock({
         name: 'another_server',
-        matcher: /authentication\/signup/,
+        matcher: /authentication\/register/,
         method: 'POST',
         response: {}
       });
@@ -155,7 +155,7 @@ describe('Signup', function() {
 
       fetchMockLocal.mock({
         name: 'invalid_signup',
-        matcher: /authentication\/signup/,
+        matcher: /authentication\/register/,
         method: 'POST',
         response: {
           status: 403,

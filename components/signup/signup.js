@@ -45,7 +45,7 @@
         };
       }
 
-      return global.fetch(Signup.server.url + '/v1/auth/register', opts).then(function(response) {
+      return global.fetch(Signup.server.url + '/authentication/register', opts).then(function(response) {
         xhr = response;
         return response.json();
       }).then(function(data) {
