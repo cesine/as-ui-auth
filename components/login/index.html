@@ -24,7 +24,7 @@
         <label hidden for="redirect" class="sr-only">Redirect</label>
         <input hidden type="text" id="redirect" name="redirect" class="form-control" placeholder="Redirect">
         <label hidden for="redirect_uri" class="sr-only">Redirect Uri</label>
-        <input hidden type="text" id="redirect_uri" name="redirect_uri" class="form-control" placeholder="Redirect Uri" value="/v1/users">
+        <input hidden type="text" id="redirect_uri" name="redirect_uri" class="form-control" placeholder="Redirect Uri" value="/v1/users/username">
         <label hidden for="server" class="hide sr-only">Server</label>
         <input hidden type="text" id="server" name="server" class="hide form-control" placeholder="Server" value="http://localhost:3000">
         <div class="checkbox">
@@ -50,14 +50,27 @@
 
     document.getElementById('server').value = window.location.origin;
 
+    // Put the query parameters into the form
+    if (window.location.search) {
+      var queryParams = window.location.search.replace('?', '').split('&');
+      queryParams.map(function(param) {
+        var parts = param.split('=');
+        if (parts.length = 2) {
+          var key = parts[0];
+          var value = parts[1];
+          document.getElementById(key).value = decodeURIComponent(value);
+        }
+      });
+    }
+
     // add the username as the redirect
     document.getElementById('username').onblur = function(event) {
-      var redirect = document.getElementById('redirect').value;
-      if (redirect) {
-        return;
+      var redirect = document.getElementById('redirect').value || window.location.origin + '/v1/users/username';
+      if (redirect.indexOf('username') === redirect.length - 8) {
+        redirect = redirect.replace('username', event.target.value);
       }
 
-      document.getElementById('redirect').value = window.location.origin + '/v1/users' + '/' + event.target.value;
+      document.getElementById('redirect').value = redirect;
     };
   </script>
 
