@@ -23,5 +23,7 @@
   "devDependencies": {
     "jasmine-core": "jasmine#^2.4.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
 }
